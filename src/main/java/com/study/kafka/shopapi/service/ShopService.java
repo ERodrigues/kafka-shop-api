@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class ShopService {
     private final ShopRepository shopRepository;
+    private final KafkaClient kafkaClient;
 
     public List<ShopDto> findAll(){
         return shopRepository
@@ -36,6 +37,8 @@ public class ShopService {
             shopItem.setShop(shop);
         }
 
-        return ShopDto.convert(shopRepository.save(shop));
+        shopDto = ShopDto.convert(shopRepository.save(shop));
+        kafkaClient.sendMessage(shopDto);
+        return shopDto;
     }
 }
