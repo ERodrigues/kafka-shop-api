@@ -1,4 +1,4 @@
-package com.study.kafka.shopapi.service;
+package com.study.kafka.shopapi.events;
 
 import com.study.kafka.shopapi.dto.ShopDto;
 import lombok.RequiredArgsConstructor;

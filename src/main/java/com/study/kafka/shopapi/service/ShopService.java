@@ -1,11 +1,11 @@
 package com.study.kafka.shopapi.service;
 
 import com.study.kafka.shopapi.dto.ShopDto;
+import com.study.kafka.shopapi.events.KafkaClient;
 import com.study.kafka.shopapi.model.Shop;
 import com.study.kafka.shopapi.model.ShopItem;
 import com.study.kafka.shopapi.repository.ShopRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;

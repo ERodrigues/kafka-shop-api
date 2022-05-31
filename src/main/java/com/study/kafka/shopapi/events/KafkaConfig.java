@@ -18,7 +18,7 @@ import java.util.Map;
 
 @Configuration
 public class KafkaConfig {
-    @Value(value = "${kafka.bootstrap.Address:172.24.121.220:9092}")
+    @Value(value = "${kafka.bootstrap.Address:172.21.45.40:9092}")
     private String bootStrapAddress;
     private Map<String, Object> properties;
 
